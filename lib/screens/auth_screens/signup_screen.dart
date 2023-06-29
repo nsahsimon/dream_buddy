@@ -1,4 +1,6 @@
 import 'package:dream_buddy/constants.dart';
+import 'package:dream_buddy/screens/auth_screens/signin_screen.dart';
+import 'package:dream_buddy/screens/home_screen/home_screen.dart';
 import 'package:dream_buddy/widgets/buttons/primary_button.dart';
 import 'package:dream_buddy/widgets/buttons/tertiary_button.dart';
 import 'package:dream_buddy/widgets/robot_stacked_containers/robot_stacked_containers.dart';
@@ -80,12 +82,16 @@ class _SignupScreenState extends State<SignupScreen> {
                           )),
                       PrimaryButton(
                         text: "Sign Up",
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                        },
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           TextButton(
                             onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => SigninScreen()));
 
                             },
                             child: Text(

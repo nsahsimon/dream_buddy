@@ -1,4 +1,6 @@
 import 'package:dream_buddy/constants.dart';
+import 'package:dream_buddy/screens/auth_screens/forgot_password.dart';
+import 'package:dream_buddy/screens/home_screen/home_screen.dart';
 import 'package:dream_buddy/widgets/buttons/primary_button.dart';
 import 'package:dream_buddy/widgets/buttons/tertiary_button.dart';
 import 'package:dream_buddy/widgets/robot_stacked_containers/robot_stacked_containers.dart';
@@ -67,28 +69,32 @@ class _SigninScreenState extends State<SigninScreen> {
                           )),
                       PrimaryButton(
                         text: "Login",
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          TextButton(
-                            onPressed: () {
-
-                            },
-                            child: Text(
-                              "Forgot password",
-                              style: TextStyle(
-                                color: Colors.black,
-                                  decoration: TextDecoration.underline),)
-                          )
-                        ],
-                      )
-                    ]
-                  ),
-                ),
-              ),
-            ))
-      ),
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                          },
+    ),
+    Row(
+    mainAxisAlignment: MainAxisAlignment.end,
+    children: [
+    TextButton(
+    onPressed: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPassword()));
+    },
+    child: Text(
+    "Forgot password",
+    style: TextStyle(
+    color: Colors.black,
+    decoration: TextDecoration.underline),)
+    )
+    ],
+    )
+    ]
+    ),
+    ),
+    ),
+    ))
+    ),
     );
+    }
   }
-}
+

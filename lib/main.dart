@@ -1,9 +1,12 @@
 import 'package:dream_buddy/constants.dart';
+import 'package:dream_buddy/models/story/story.dart';
 import 'package:dream_buddy/screens/auth_screens/forgot_password.dart';
 import 'package:dream_buddy/screens/auth_screens/parent_auth.dart';
 import 'package:dream_buddy/screens/auth_screens/signin_screen.dart';
 import 'package:dream_buddy/screens/auth_screens/signup_screen.dart';
+import 'package:dream_buddy/screens/home_screen/home_screen.dart';
 import 'package:dream_buddy/screens/onboarding_screen/onboarding_screen.dart';
+import 'package:dream_buddy/screens/story_screen/story_screen.dart';
 import 'package:dream_buddy/screens/survey/pop_up_survey.dart';
 import 'package:dream_buddy/screens/survey/pop_up_survey_end.dart';
 import 'package:dream_buddy/widgets/robot_stacked_containers/robot_stacked_containers.dart';
@@ -24,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: kAppColor,
       ),
-      home: PopupSurveyEnd()//const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: OnboardingScreen(),//StoryScreen(story: Story())//const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
