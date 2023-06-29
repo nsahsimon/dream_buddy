@@ -27,3 +27,5 @@ TextStyle kBodyTextStyle = GoogleFonts.roboto(
   color:kBodyTextColor, height: 1.5
 );
 const int kLineSpacing = 10;
+
+const int kPercentStep = 5;

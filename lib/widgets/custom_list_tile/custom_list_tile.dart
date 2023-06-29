@@ -8,13 +8,15 @@ class CustomListTile extends StatelessWidget {
   Widget? leading;
   Widget? trailing;
   Widget? title;
+  bool highlight;
 
   CustomListTile({
     this.height,
     this.width,
     this.title,
     this.trailing,
-    this.onPressed
+    this.onPressed,
+    this.highlight = false
   });
 
   @override
@@ -22,9 +24,9 @@ class CustomListTile extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         double frameHeight = height ?? constraints.maxHeight;
-        double frameWidth = width?? constraints.maxWidth;
-        double innerConHeight = frameHeight - 40;
-        double innerConWidth  = frameWidth - 40;
+        double frameWidth = width ?? constraints.maxWidth;
+        double innerConHeight = frameHeight - 5;
+        double innerConWidth  = frameWidth - 5;
         return Padding(
           padding: const EdgeInsets.all(10.0),
           child: Container(
@@ -33,8 +35,8 @@ class CustomListTile extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned(
-                  bottom: 15,
-                  right: 35,
+                  bottom: 0,
+                  right: 0,
                   // alignment: Alignment.bottomRight,
                   child: Container(
                       height: innerConHeight,
@@ -49,11 +51,13 @@ class CustomListTile extends StatelessWidget {
                 ),
                 Positioned(
                   // alignment: Alignment.topLeft,
+                  top: 0,
+                    left: 0,
                     child: Container(
                         height: innerConHeight,
                         width: innerConWidth,
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: highlight ? Color(0xffE3E4F1) : Colors.white,
                           borderRadius: BorderRadius.circular(20),
                           border: Border.all(color: Color(0xFF1F3242)),
                         ),

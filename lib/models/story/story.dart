@@ -12,6 +12,6 @@ class Story {
     this.description = "Join Vika and her mother Anna on an interstellar journey to the Healthy Habit Galaxy, where they'll meet friendly robots, innovative machines, and learn important lessons about breaking bad habits. A perfect blend of science fiction and educational storytelling."
   });
 
-  String get readTimeStr => '$readTime mins';
+  String get readTimeStr => '$readTime minutes';
   String get lengthStr => '$length pages';
 }

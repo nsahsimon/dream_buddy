@@ -6,7 +6,8 @@ class StackedTransContainers extends StatelessWidget {
   EdgeInsets? padding;
   String? imagePath;
   String? text;
-  StackedTransContainers({this.child, this.width, this.height, this.padding, this.imagePath, this.text});
+  Color color;
+  StackedTransContainers({this.child, this.width, this.height, this.padding, this.imagePath, this.text, this.color = Colors.white});
   double angle = -5;
 
   @override
@@ -27,6 +28,7 @@ class StackedTransContainers extends StatelessWidget {
                 child: MyContainer(
                   height: height ?? constraints.maxHeight,
                   width: width ?? constraints.maxHeight,
+                  color: color,
                   child: Padding(
                     padding: padding ??  EdgeInsets.symmetric(
                         horizontal: constraints.maxWidth * 0.1 ),
@@ -59,8 +61,9 @@ class MyContainer extends StatelessWidget {
   final double? width;
   final Widget? child;
   final Key? containerKey;
+  final Color color;
   MyContainer({
-    this.height, this.child, this.width, this.containerKey
+    this.height, this.child, this.width, this.containerKey, this.color = Colors.white
   });
 
   @override
@@ -69,8 +72,10 @@ class MyContainer extends StatelessWidget {
       key: containerKey,
       height: height,
       width: width,
+
       decoration: BoxDecoration(
-        color: const Color(0xFFFFFFFF),
+        color: color,
+        // color: const Color(0xFFFFFFFF),
         borderRadius: BorderRadius.circular(10),
         border: Border.all(color: const Color(0xFF1F3242)),
       ),

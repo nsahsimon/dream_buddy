@@ -4,23 +4,21 @@ import 'package:flutter/material.dart';
 class TertiaryButton extends StatelessWidget {
   final String? text;
   final Function? onPressed;
-   TertiaryButton({this.text, this.onPressed});
+  final Color color;
+   TertiaryButton({this.text, this.onPressed, this.color = const Color(0xFFE8E9F3)});
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: () {
+    return GestureDetector(
+      onTap: (){
         if(onPressed != null) onPressed!();
       },
-      style: TextButton.styleFrom(
-        backgroundColor: Color(0xFFE8E9F3),
-        side: BorderSide(
-          color: Color(0xFF6667AB)
-        )
-      ),
       child: Container(
+        padding: EdgeInsets.symmetric(vertical: 12,),
         decoration: BoxDecoration(
-          color: Color(0xFFE8E9F3),
+          color: color,
+          borderRadius: BorderRadius.circular(13),
+          border: Border.all(color: Color(0xFF1F3242))
         ),
         child: Center(
           child: Text(

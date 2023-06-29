@@ -24,6 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double tileHeight = MediaQuery.of(context).size.height * 0.1;
     return SafeArea(
       child: Scaffold(
         backgroundColor: kBgColor,
@@ -63,21 +64,22 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(
                 flex: 2,
                 child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      ...List.generate(
-                          instructionStyles.examples.length,
-                          (index) => CustomListTile(
-                            width: MediaQuery.of(context).size.width * 0.8,
-                            title: Text(instructionStyles.examples[index].description, style: kBodyTextStyle),
-                            trailing: Image.asset(instructionStyles.examples[index].imagePath),
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          ...List.generate(
+                              instructionStyles.examples.length,
+                              (index) => CustomListTile(
+                                width: MediaQuery.of(context).size.width * 0.8,
+                                height: tileHeight,
+                                title: Text(instructionStyles.examples[index].description, style: kBodyTextStyle),
+                                trailing: Image.asset(instructionStyles.examples[index].imagePath),
+                              )
                           )
+                        ],
                       )
-                    ],
-                  )
-                )
+                    )
             ),
 
             ///Moral
@@ -94,7 +96,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 (index) => CustomListTile(
                               width: MediaQuery.of(context).size.width * 0.8,
                               title: Text(instructionStyles.examples[index].description, style: kBodyTextStyle),
-                              trailing: Image.asset(instructionStyles.examples[index].imagePath),
+                              height: tileHeight,
+                                  trailing: Image.asset(instructionStyles.examples[index].imagePath),
                             )
                         )
                       ],
@@ -116,7 +119,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 (index) => CustomListTile(
                               width: MediaQuery.of(context).size.width * 0.8,
                               title: Text(instructionStyles.examples[index].description, style: kBodyTextStyle),
-                              trailing: Image.asset(instructionStyles.examples[index].imagePath),
+                                  height: tileHeight,
+                                  trailing: Image.asset(instructionStyles.examples[index].imagePath),
                             )
                         )
                       ],

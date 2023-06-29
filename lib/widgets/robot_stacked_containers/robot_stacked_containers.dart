@@ -58,7 +58,7 @@ class RobotStackedContainers extends StatelessWidget {
                         onTap: (){
                           onCloseButtonPressed!();
                         },
-                        child: Image.asset("assets/buttons/button_close.png"))
+                        child: Image.asset("assets/buttons/button_cancel.png"))
                 ),
               ),
             ],

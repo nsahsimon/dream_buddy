@@ -45,7 +45,7 @@ class StoryCard extends StatelessWidget {
           builder: (context, constraints) {
             return Container(
               height: constraints.maxHeight,
-              width: 150,
+              width: constraints.maxHeight * 0.85,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
@@ -85,8 +85,8 @@ class StoryCard extends StatelessWidget {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
                                   title,
-                                  textAlign: TextAlign.end,
-                                  style: TextStyle(color: Colors.white)
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(color: Colors.white, fontSize: 12)
                                 ),
                               ),
                             ),
@@ -118,7 +118,7 @@ class AddStoryCard extends StatelessWidget {
             return Container(
               padding: EdgeInsets.all(10),
                 height: constraints.maxHeight,
-                width: 150,
+                width: constraints.maxHeight * 0.85,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
