@@ -2,6 +2,7 @@ import 'package:dream_buddy/constants.dart';
 import 'package:dream_buddy/models/story/story.dart';
 import 'package:dream_buddy/models/story/story_characteritic.dart';
 import 'package:dream_buddy/screens/home_screen//components.dart';
+import 'package:dream_buddy/screens/settings/menu.dart';
 import 'package:dream_buddy/screens/story_screen/story_screen.dart';
 import 'package:dream_buddy/widgets/custom_list_tile/custom_list_tile.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +38,11 @@ class _HomeScreenState extends State<HomeScreen> {
               child: ListTile(
                 title: Text("Hello", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
                 subtitle: Text("What are we reading today ?"),
-                trailing: Icon(Icons.account_circle, color: kAppColor, size: 40)
+                trailing: IconButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => MenuScreen()));
+                  },
+                    icon: Icon(Icons.account_circle, color: kAppColor, size: 40))
               ),
             ),
             // SizedBox(height: 10),

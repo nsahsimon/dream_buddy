@@ -1,5 +1,6 @@
 import 'package:dream_buddy/constants.dart';
 import 'package:dream_buddy/models/story/story.dart';
+import 'package:dream_buddy/screens/story_screen/read_story.dart';
 import 'package:dream_buddy/widgets/buttons/delete_button.dart';
 import 'package:dream_buddy/widgets/buttons/primary_back_button.dart';
 import 'package:dream_buddy/widgets/buttons/primary_button.dart';
@@ -105,7 +106,9 @@ class StoryScreen extends StatelessWidget {
                               // Expanded(flex: 10, child: null),
                               PrimaryButton(
                                 text: "Read",
-                                onPressed: () {}
+                                onPressed: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => ReadStoryScreen(story: story)));
+                                }
                               ),
                               SizedBox(height: 20)
 
@@ -141,7 +144,10 @@ class StoryScreen extends StatelessWidget {
                   ),
                   Align(
                     alignment: Alignment.topLeft,
-                    child: PrimaryBackButton(onTap: (){}),
+                    child: PrimaryBackButton(
+                        onTap: (){
+                          Navigator.pop(context);
+                        }),
                   )
                 ],
               ),

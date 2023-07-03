@@ -4,6 +4,7 @@ import 'package:dream_buddy/widgets/buttons/primary_cancel_button.dart';
 import 'package:dream_buddy/widgets/buttons/tertiary_button.dart';
 import 'package:dream_buddy/widgets/stacked_rot_container/stacked_rot_container.dart';
 import 'package:dream_buddy/widgets/stacked_trans_container/stacked_trans_container.dart';
+import 'package:dream_buddy/widgets/star_tracker/star_tracker.dart';
 import 'package:flutter/material.dart';
 class CreateStoryLayout extends StatelessWidget {
   const CreateStoryLayout({
@@ -142,13 +143,7 @@ class CreateStoryLayout extends StatelessWidget {
                   ),
                   Align(
                     alignment: Alignment.topRight,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text("$starCount"),
-                          Icon(Icons.star, color: Color(0xffED9B40))
-                        ],
-                    ),
+                    child: StarTracker(starCount: starCount),
                   )
                 ],
               ),
@@ -157,3 +152,4 @@ class CreateStoryLayout extends StatelessWidget {
         });
   }
 }
+
