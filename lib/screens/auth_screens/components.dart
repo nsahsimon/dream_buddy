@@ -56,23 +56,3 @@ class _CustomTextformFieldState extends State<CustomTextformField> {
   }
 }
 
-class CustomDivider extends StatelessWidget {
-  const CustomDivider({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Expanded(child: Divider(thickness: 2,)),
-          SizedBox(width: 20),
-          Text("or", ),
-          SizedBox(width: 20),
-          Expanded(child: Divider(thickness: 2,)),
-        ]
-    );
-  }
-}

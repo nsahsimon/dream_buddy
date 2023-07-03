@@ -5,6 +5,7 @@ import 'package:dream_buddy/widgets/buttons/primary_button.dart';
 import 'package:dream_buddy/widgets/buttons/tertiary_button.dart';
 import 'package:dream_buddy/widgets/robot_stacked_containers/robot_stacked_containers.dart';
 import 'package:flutter/material.dart';
+import '../../widgets/dividers/custom_divider.dart';
 import '../auth_screens/components.dart';
 
 

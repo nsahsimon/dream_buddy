@@ -1,7 +1,7 @@
 import 'package:dream_buddy/constants.dart';
 import 'package:dream_buddy/screens/auth_screens/signin_screen.dart';
 import 'package:dream_buddy/screens/auth_screens/signup_screen.dart';
-import 'package:dream_buddy/screens/create_character/choose_character.dart';
+import 'package:dream_buddy/screens/create_character/choose_character_type.dart';
 import 'package:dream_buddy/widgets/buttons/primary_button.dart';
 import 'package:dream_buddy/widgets/stacked_rot_container/stacked_rot_container.dart';
 import 'package:flutter/material.dart';
@@ -68,7 +68,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                            PrimaryButton(
                              text: "Create a character",
                              onPressed: () {
-                               Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseCharacterScreen()));
+                               Navigator.push(context, MaterialPageRoute(builder: (context) => SigninScreen()));
                              },
                            )
                          ],

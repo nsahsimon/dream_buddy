@@ -39,10 +39,10 @@ class _ChooseAgeScreenState extends State<ChooseAgeScreen> {
           description: description,
           children: children,
           onLeftButtonPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseRaceScreen(percent: widget.percent + kPercentStep)));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseRaceScreen(percent: widget.percent + kCreateCharPercentStep)));
           },
           onRightButtonPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseRaceScreen(percent: widget.percent + kPercentStep)));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseRaceScreen(percent: widget.percent + kCreateCharPercentStep)));
           },
       ),
 

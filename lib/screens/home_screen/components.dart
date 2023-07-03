@@ -1,4 +1,5 @@
 import 'package:dream_buddy/constants.dart';
+import 'package:dream_buddy/screens/create_story/choose_character.dart';
 import 'package:flutter/material.dart';
 
 class CustomDivider extends StatelessWidget {
@@ -135,6 +136,7 @@ class AddStoryCard extends StatelessWidget {
                     IconButton(
                       icon: Icon(Icons.add_circle, size: 35, color: Color(0xFF1A936F)),
                       onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseCharacterScreen()));
 
                       },
                     )

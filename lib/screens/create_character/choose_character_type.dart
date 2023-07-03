@@ -10,15 +10,15 @@ import 'package:dream_buddy/widgets/stacked_trans_container/stacked_trans_contai
 import 'package:flutter/material.dart';
 
 
-class ChooseCharacterScreen extends StatefulWidget {
+class ChooseCharacterTypeScreen extends StatefulWidget {
   double percent;
-  ChooseCharacterScreen({this.percent = 10});
+  ChooseCharacterTypeScreen({this.percent = 10});
 
   @override
-  State<ChooseCharacterScreen> createState() => _ChooseCharacterScreenState();
+  State<ChooseCharacterTypeScreen> createState() => _ChooseCharacterTypeScreenState();
 }
 
-class _ChooseCharacterScreenState extends State<ChooseCharacterScreen> {
+class _ChooseCharacterTypeScreenState extends State<ChooseCharacterTypeScreen> {
   String title = "Choose the type of character";
   String description = "Type of character is used to draw appropriate illustrations.";
 
@@ -52,7 +52,7 @@ class _ChooseCharacterScreenState extends State<ChooseCharacterScreen> {
           description: description,
           children: children,
           onLeftButtonPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseGenderScreen(percent: widget.percent + kPercentStep)));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseGenderScreen(percent: widget.percent + kCreateCharPercentStep)));
           },
           onRightButtonPressed: onRightButtonPressed),
     );

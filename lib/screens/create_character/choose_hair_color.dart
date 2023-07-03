@@ -50,10 +50,10 @@ class _ChooseHairColorScreenState extends State<ChooseHairColorScreen> {
           description: description,
           children: children,
           onLeftButtonPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseHairLengthScreen(percent: widget.percent + kPercentStep)));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseHairLengthScreen(percent: widget.percent + kCreateCharPercentStep)));
           },
           onRightButtonPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseHairLengthScreen(percent: widget.percent + kPercentStep)));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseHairLengthScreen(percent: widget.percent + kCreateCharPercentStep)));
           }),
     );
 

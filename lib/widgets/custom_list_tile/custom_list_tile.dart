@@ -15,6 +15,7 @@ class CustomListTile extends StatelessWidget {
     this.width,
     this.title,
     this.trailing,
+    this.leading,
     this.onPressed,
     this.highlight = false
   });

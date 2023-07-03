@@ -1,6 +1,6 @@
 import 'package:dream_buddy/constants.dart';
 import 'package:dream_buddy/screens/create_character/choose_age.dart';
-import 'package:dream_buddy/screens/create_character/components/choose_eye_color.dart';
+import 'package:dream_buddy/screens/create_character/choose_eye_color.dart';
 import 'package:dream_buddy/screens/create_character/components/create_character_layout.dart';
 import 'package:dream_buddy/widgets/custom_list_tile/custom_list_tile.dart';
 import 'package:flutter/material.dart';
@@ -50,10 +50,10 @@ class _ChooseRaceScreenState extends State<ChooseRaceScreen> {
           description: description,
           children: children,
           onLeftButtonPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseEyeColorScreen(percent: widget.percent + kPercentStep)));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseEyeColorScreen(percent: widget.percent + kCreateCharPercentStep)));
           },
           onRightButtonPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseEyeColorScreen(percent: widget.percent + kPercentStep)));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseEyeColorScreen(percent: widget.percent + kCreateCharPercentStep)));
           }),
     );
 
