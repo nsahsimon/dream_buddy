@@ -131,7 +131,9 @@ class CreateCharacterLayout extends StatelessWidget {
                   Align(
                     alignment: Alignment.topLeft,
                     child: PrimaryCancelButton(
-                        onTap: (){}
+                        onTap: (){
+                          Navigator.pop(context);
+                        }
                     ),
                   )
                 ],
