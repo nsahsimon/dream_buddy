@@ -43,15 +43,19 @@ class _SigninScreenState extends State<SigninScreen> {
                         "Welcome back!",
                         style: kHeaderTextStyle,
                       ),
+                      SizedBox(height: 15),
                       Text(
                         "Please login to start using the app",
                         style: kBodyTextStyle,
                         textAlign: TextAlign.center,
                       ),
+                      SizedBox(height: 15),
                       TertiaryButton(
                         text: 'login with facebook'
                       ),
+                      SizedBox(height: 15),
                       CustomDivider(),
+                      SizedBox(height: 15),
                       Form(
                           child: Column(
                             children: [
@@ -68,6 +72,7 @@ class _SigninScreenState extends State<SigninScreen> {
                               SizedBox(height: 10),
                             ]
                           )),
+                      SizedBox(height: 15),
                       PrimaryButton(
                         text: "Login",
                         onPressed: (){

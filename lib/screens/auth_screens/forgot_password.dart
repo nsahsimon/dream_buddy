@@ -37,11 +37,13 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                         "Forgot password ?",
                         style: kHeaderTextStyle,
                       ),
+                      SizedBox(height: 15),
                       Text(
                         "No worries, we’ll send you a reset link with instructions.",
                         style: kBodyTextStyle,
                         textAlign: TextAlign.center,
                       ),
+                      SizedBox(height: 15),
 
                       Form(
                           child: Column(
@@ -53,6 +55,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                               SizedBox(height: 10),
                             ]
                           )),
+                      SizedBox(height: 15),
                       PrimaryButton(
                         text: "Reset password",
                       ),

@@ -68,7 +68,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                            PrimaryButton(
                              text: "Create a character",
                              onPressed: () {
-                               Navigator.push(context, MaterialPageRoute(builder: (context) => SigninScreen()));
+                               Navigator.push(context, MaterialPageRoute(builder: (context) => SignupScreen()));
                              },
                            )
                          ],

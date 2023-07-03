@@ -33,7 +33,7 @@ class _SignupScreenState extends State<SignupScreen> {
             padding: const EdgeInsets.all(30.0),
             child: RobotStackedContainers(
               onBackButtonPressed: () {
-
+                Navigator.pop(context);
               },
               child: Center(
                 child: SingleChildScrollView(
@@ -43,16 +43,21 @@ class _SignupScreenState extends State<SignupScreen> {
                       Text(
                         "Create Dream Buddy account.",
                         style: kHeaderTextStyle,
+                        textAlign: TextAlign.center,
                       ),
+                      SizedBox(height: 15),
                       Text(
                         "No annoying spam, we promise",
                         style: kBodyTextStyle,
                         textAlign: TextAlign.center,
                       ),
+                      SizedBox(height: 15),
                       TertiaryButton(
                         text: 'Sign up with facebook'
                       ),
+                      SizedBox(height: 15),
                       CustomDivider(),
+                      SizedBox(height: 15),
                       Form(
                           child: Column(
                             children: [
@@ -81,12 +86,14 @@ class _SignupScreenState extends State<SignupScreen> {
                               SizedBox(height: 10),
                             ]
                           )),
+                      SizedBox(height: 15),
                       PrimaryButton(
                         text: "Sign Up",
                         onPressed: (){
                           Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
                         },
                       ),
+                      SizedBox(height: 15),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [

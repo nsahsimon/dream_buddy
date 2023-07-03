@@ -1,6 +1,7 @@
 import 'package:dream_buddy/constants.dart';
 import 'package:dream_buddy/models/story/story.dart';
 import 'package:dream_buddy/models/story/story_characteritic.dart';
+import 'package:dream_buddy/screens/auth_screens/parent_auth.dart';
 import 'package:dream_buddy/screens/home_screen//components.dart';
 import 'package:dream_buddy/screens/settings/menu.dart';
 import 'package:dream_buddy/screens/story_screen/story_screen.dart';
@@ -40,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 subtitle: Text("What are we reading today ?"),
                 trailing: IconButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => MenuScreen()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ParentAuth()));
                   },
                     icon: Icon(Icons.account_circle, color: kAppColor, size: 40))
               ),
